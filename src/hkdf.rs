@@ -2,7 +2,7 @@ use zeroize::ZeroizeOnDrop;
 use crate::core::Output;
 use crate::error::CryptoError;
 
-pub trait Kdf {
+pub trait Hkdf {
     type Prk: Output + ZeroizeOnDrop;       // 伪随机密钥
     type Okm: Output;                       // 输出密钥材料
 
