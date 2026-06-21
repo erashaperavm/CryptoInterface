@@ -1,0 +1,15 @@
+[package]
+name = "crypto-interface"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "crypto_interface"
+crate-type = ["rlib"]       # 默认是 rlib，通常足够
+
+[dependencies]
+zeroize = { version = "1", default-features = false, features = ["zeroize_derive"] }
+
+[features]
+default = []
+std = ["zeroize/std"]
